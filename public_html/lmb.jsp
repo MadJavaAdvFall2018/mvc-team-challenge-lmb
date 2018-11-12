@@ -15,7 +15,7 @@
             </ul>
         </nav>
 
-        <form action="post">
+        <form action="lmb" method="post">
             <input type="text" name="activity" placeholder="Activity"><br/>
             <input type="text" name="location" placeholder="Location"><br/>
             <input type="text" name="miles" placeholder="Miles"><br/><br/>
