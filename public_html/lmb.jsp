@@ -22,5 +22,11 @@
 
             <input type="submit" value="Submit">
         </form>
+
+        <table>
+            <tr><th></th><th>Activity</th><th>Location</th><th>Distance (Miles)</th></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+        ${bean1.activity}
     </body>
 </html>

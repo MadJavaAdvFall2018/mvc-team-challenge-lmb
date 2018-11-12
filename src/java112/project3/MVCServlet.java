@@ -25,28 +25,29 @@ public class MVCServlet extends HttpServlet {
      *@exception  IOException       if there is an IO failure
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException
+    {
 
-              MVCBean newBean = new MVCBean();
+        MVCBean newBean = new MVCBean();
 
-              newBean.setActivity(request.getParameter("activity"));
+        newBean.setActivity(request.getParameter("activity"));
 
-              newBean.setLocation(request.getParameter("location"));
+        newBean.setLocation(request.getParameter("location"));
 
-              double miles = Double.parseDouble(request.getParameter("miles"));
+        double miles = Double.parseDouble(request.getParameter("miles"));
 
-              newBean.setMiles(miles);
+        newBean.setMiles(miles);
 
-              request.setAttribute("bean1", newBean);
+        request.setAttribute("bean1", newBean);
 
-              String url = "/lmb.jsp";
+        String url = "/lmb.jsp";
 
-              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-                      dispatcher.forward(request, response);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
 
-            System.out.println(newBean.getActivity());
-            System.out.println(newBean.getLocation());
-            System.out.println(newBean.getMiles());
+        // System.out.println(newBean.getActivity());
+        // System.out.println(newBean.getLocation());
+        // System.out.println(newBean.getMiles());
 
     }
 
