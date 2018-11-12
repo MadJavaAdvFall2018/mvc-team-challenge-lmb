@@ -42,7 +42,7 @@ public class MVCServlet extends HttpServlet {
 
         beans.add(newBean);
 
-        request.setAttribute("beans", beans);
+        request.setAttribute("bean", newBean);
 
         String url = "/lmb.jsp";
 
