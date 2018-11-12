@@ -33,7 +33,7 @@ public class MVCServlet extends HttpServlet {
 
               newBean.setLocation(request.getParameter("location"));
 
-              double miles = request.getParameter("miles").parseDouble();
+              double miles = Double.parseDouble(request.getParameter("miles"));
 
               newBean.setMiles(miles);
 
