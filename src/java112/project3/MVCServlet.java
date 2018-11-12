@@ -44,7 +44,7 @@ public class MVCServlet extends HttpServlet {
               RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
                       dispatcher.forward(request, response);
 
-            System.out.println(newBean.getActivty());
+            System.out.println(newBean.getActivity());
             System.out.println(newBean.getLocation());
             System.out.println(newBean.getMiles());
 
