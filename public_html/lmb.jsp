@@ -25,8 +25,13 @@
 
         <table>
             <tr><th></th><th>Activity</th><th>Location</th><th>Distance (Miles)</th></tr>
+            <%
+            for () {
+
+            }
+            %>
             <tr><td></td><td></td><td></td><td></td><td></td></tr>
         </table>
-        ${bean1.activity}
+        ${beans}
     </body>
 </html>
