@@ -24,14 +24,18 @@ public class MVCServlet extends HttpServlet {
      *@exception  ServletException  if there is a Servlet failure
      *@exception  IOException       if there is an IO failure
      */
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-              BeanOne newBean = new MVCBean();
+              MVCBean newBean = new MVCBean();
 
-              newBean.setData("I'm special!");
+              newBean.setActivity(request.getParameter("activity"));
 
-              request.setAttribute("myCoolBean", myBean);
+              newBean.setLocation(request.getParameter("location"));
+
+              newBean.setMiles(request.getParameter("miles"));
+
+              request.setAttribute("bean1", newBean);
 
               String url = "/lmb.jsp";
 
