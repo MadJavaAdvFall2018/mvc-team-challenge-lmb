@@ -1,6 +1,7 @@
 package java112.project3;
 
 import java.io.*;
+import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -25,8 +26,9 @@ public class MVCServlet extends HttpServlet {
      *@exception  IOException       if there is an IO failure
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
+
+        ArrayList<MVCBean> beans = new ArrayList<MVCBean>();
 
         MVCBean newBean = new MVCBean();
 
@@ -38,7 +40,9 @@ public class MVCServlet extends HttpServlet {
 
         newBean.setMiles(miles);
 
-        request.setAttribute("bean1", newBean);
+        beans.add(newBean);
+
+        request.setAttribute("beans", beans);
 
         String url = "/lmb.jsp";
 
