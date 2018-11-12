@@ -1,3 +1,5 @@
+<%@ page import="java.util.*" %>
+<%@ page import="src.java112.project3.MVCBean" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -23,7 +25,7 @@
             <input type="submit" value="Submit">
         </form>
 
-        <%@ page import="java.util.*" %>
+
 
         <table>
             <tr><th></th><th>Activity</th><th>Location</th><th>Distance (Miles)</th></tr>
