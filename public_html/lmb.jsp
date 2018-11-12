@@ -23,9 +23,17 @@
             <input type="submit" value="Submit">
         </form>
 
+        <%@ page import="java.util.*" %>
+
         <table>
             <tr><th></th><th>Activity</th><th>Location</th><th>Distance (Miles)</th></tr>
-            <tr><td>1</td><td>${bean.activity}</td><td>${bean.location}</td><td>${bean.miles}</td></tr>
+            <!--<tr><td>1</td><td>${bean.activity}</td><td>${bean.location}</td><td>${bean.miles}</td></tr>-->
+            <%
+            ArrayList<Object> list = new ArrayList<Object>();
+            list.add(${bean});
+            for (Object bobj : list) { %>
+                <tr><td>1</td><td><%=bobj.activity%></td><td><%=bobj.activity%></td><td><%=bobj.activity%></td></tr>
+            <% } %>
         </table>
     </body>
 </html>
