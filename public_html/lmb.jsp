@@ -25,13 +25,7 @@
 
         <table>
             <tr><th></th><th>Activity</th><th>Location</th><th>Distance (Miles)</th></tr>
-            <tr><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>1</td><td>${bean.activity}</td><td>${bean.location}</td><td>${bean.miles}</td></tr>
         </table>
-
-        <%
-            for (MVCBean bean : ${beans}) {
-                out.pritnln(bean.activity);
-            }
-        %>
     </body>
 </html>
