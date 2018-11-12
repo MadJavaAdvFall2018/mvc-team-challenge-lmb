@@ -1,4 +1,4 @@
-package java112.mvc;
+package java112.project3;
 
 /**
  *  This is a JavaBean to keep track of miles, location and activity completed.
