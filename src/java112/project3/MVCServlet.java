@@ -47,7 +47,7 @@ public class MVCServlet extends HttpServlet {
 
         String url = "/lmb.jsp";
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+        RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
 
         // System.out.println(newBean.getActivity());

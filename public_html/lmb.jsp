@@ -1,5 +1,5 @@
 <%@ page import="java.util.*" %>
-<%@ page import="java112.project3.MVCBean" %>
+<%@ page import="java112.project3.*" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -32,11 +32,13 @@
             <%-- <tr><td>1</td><td>${bean.activity}</td><td>${bean.location}</td><td>${bean.miles}</td></tr> --%>
 
             <%
-            List<MVCBean> beans = (ArrayList<MVCBean>) request.getAttribute("beans");
-            //out.println(Arrays.toString(beans));
 
+            List<MVCBean> beans = (ArrayList<MVCBean>) request.getAttribute("beans");
+            // out.println(beans);
+
+            
             for (MVCBean bean : beans) {
-                out.println(bean.getActivity());
+                out.print(bean.getActivity());
             }
 
 
