@@ -16,7 +16,7 @@ import javax.servlet.annotation.*;
     urlPatterns = { "/mvc", "/lmb" }
 )
 public class MVCServlet extends HttpServlet {
-
+    List<MVCBean> beans = new ArrayList<MVCBean>();
     /**
      *  Handles HTTP GET requests.
      *
@@ -28,7 +28,7 @@ public class MVCServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        ArrayList<MVCBean> beans = new ArrayList<MVCBean>();
+
 
         MVCBean newBean = new MVCBean();
 
@@ -43,6 +43,7 @@ public class MVCServlet extends HttpServlet {
         beans.add(newBean);
 
         request.setAttribute("beans", beans);
+        // request.setAttribute("bean", newBean);
 
         String url = "/lmb.jsp";
 

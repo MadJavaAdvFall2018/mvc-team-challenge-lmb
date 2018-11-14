@@ -1,5 +1,5 @@
 <%@ page import="java.util.*" %>
-<%@ page import="src.java112.project3.MVCBean" %>
+<%@ page import="java112.project3.MVCBean" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -13,7 +13,7 @@
             <img src="images/logo.png">
             <ul>
                 <li><a>Home</a></li>
-                <li><a>My Miles</a></li>
+                <li><a>Diagram</a></li>
             </ul>
         </nav>
 
@@ -29,13 +29,18 @@
 
         <table>
             <tr><th></th><th>Activity</th><th>Location</th><th>Distance (Miles)</th></tr>
-            <!--<tr><td>1</td><td>${bean.activity}</td><td>${bean.location}</td><td>${bean.miles}</td></tr>-->
+            <%-- <tr><td>1</td><td>${bean.activity}</td><td>${bean.location}</td><td>${bean.miles}</td></tr> --%>
+
             <%
-            ArrayList<Object> list = new ArrayList<Object>();
-            list.add(${bean});
-            for (Object bobj : list) { %>
-                <tr><td>1</td><td><%=bobj.activity%></td><td><%=bobj.activity%></td><td><%=bobj.activity%></td></tr>
-            <% } %>
+            List<MVCBean> beans = (ArrayList<MVCBean>) request.getAttribute("beans");
+            //out.println(Arrays.toString(beans));
+
+            for (MVCBean bean : beans) {
+                out.println(bean.getActivity());
+            }
+
+
+            %>
         </table>
     </body>
 </html>
